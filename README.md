@@ -1,16 +1,57 @@
-# React + Vite
+# 📊 Hotel Booking Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple dashboard to analyze hotel bookings, revenue trends, and reservation details with a clean UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⭐ Dashboard
 
-## React Compiler
+### 📈 Overall Metrics
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Total bookings
+- Total revenue
+- Occupancy rate
+- Conversion rate
 
-## Expanding the ESLint configuration
+### 📋 Bookings Detail
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Monthly bookings and revenue trends list
+- Recent bookings section
+  
+### 📊 Interactive Charts
+
+- Bar chart for bookings vs revenue
+- Line chart for revenue trend
+- Pie chart for booking status distribution
+
+## 📚 Bookings Page
+
+Fetches booking data from the API and caches it using React Query.
+
+### 🔎 Client-Side Filters (no extra API calls)
+
+- Booking status: all, confirmed, pending, cancelled
+- Payment status: all, paid, pending
+- Amount range: below 10k, 10k–20k, above 20k
+
+### 📄 Booking Details Displayed
+
+- Guest name
+- Hotel name
+- Check-in and check-out dates
+- Amount
+- Booking status and payment status
+
+### 🔁 Data Handling
+
+- Cached API responses using React Query
+- Persistent caching on page reload
+- Re-fetching only when server parameters change (e.g., days or sorting)
+- Client-side filtering for UI-based filters such as payment and amount
+
+### 🎨 UI
+
+- Sidebar layout for navigation
+- Responsive pages and charts
+- Minimal styling using Tailwind CSS
+- Clean and simple interface for monitoring booking data
