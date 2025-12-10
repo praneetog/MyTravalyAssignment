@@ -23,7 +23,7 @@ function MetricCard({ label, value, suffix }) {
 }
 
 export default function Dashboard() {
-  const { data: metrics, loading: metricsLoading } = useMetrics(60);
+  const { data: metrics, loading: metricsLoading } = useMetrics(30);
   const { data: trends, period, loading: trendsLoading } = useTrends(6);
   const { data: bookingsData, isLoading: bookingsLoading } = useBookings({
     days: 7,
@@ -38,7 +38,7 @@ export default function Dashboard() {
         <div>
           <h1 className="text-2xl font-semibold text-[#0B0033]">Dashboard</h1>
           <p className="text-sm text-slate-500">
-            Overview of bookings, revenue and trends.
+            Overview of bookings, revenue and trends of last 30 days.
           </p>
         </div>
       </header>

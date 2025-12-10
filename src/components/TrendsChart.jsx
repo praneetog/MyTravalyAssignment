@@ -55,7 +55,7 @@ export default function TrendsChart({ trends, loading }) {
           {/* Bookings bar → left axis */}
           <Bar
             yAxisId="left"
-            dataKey="bookings" // keep this if your field is "bookings"
+            dataKey="bookings" 
             name="Bookings"
             fill="gray"
             radius={[4, 4, 0, 0]}

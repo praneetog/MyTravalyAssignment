@@ -10,7 +10,7 @@ export default function App() {
       <div className="flex min-h-screen bg-white text-slate-900">
         <Sidebar />
         {/* content */}
-        <div className="flex-1 flex flex-col ml-64">
+        <div className="flex-1 flex flex-col md:ml-64">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/bookings" element={<Bookings />} />
